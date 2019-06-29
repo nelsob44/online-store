@@ -6,7 +6,7 @@ let _db;
 
 const mongoConnect = callback => {
     MongoClient.connect(
-        'mongodb+srv://nelson:Mi201984@cluster0-lzst1.mongodb.net/shop?retryWrites=true&w=majority'
+        'mongodb+srv://<NAME>:<PASSWORD>@cluster0-lzst1.mongodb.net/shop?retryWrites=true&w=majority'
         )
         .then(client => {
             console.log('Connedted');
@@ -28,15 +28,3 @@ const getDb = () => {
 
 exports.mongoConnect = mongoConnect;
 exports.getDb = getDb;
-
-
-
-
-// const Sequelize = require('sequelize');
-
-// const sequelize = new Sequelize('node-project', 'root', 'Mi201992', {
-//     dialect: 'mysql', 
-//     host: 'localhost'
-// });
-
-// module.exports = sequelize;
